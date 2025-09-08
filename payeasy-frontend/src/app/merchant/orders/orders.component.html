@@ -1,0 +1,6 @@
+<mat-card>
+  <h2>Orders</h2>
+  <mat-list>
+    <mat-list-item *ngFor="let o of orders">Order #{{o.id}} - {{o.total | currency}}</mat-list-item>
+  </mat-list>
+</mat-card>

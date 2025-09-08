@@ -1,0 +1,10 @@
+<mat-card>
+  <h2>Enter OTP</h2>
+  <form (ngSubmit)="verify()">
+    <mat-form-field appearance="fill">
+      <mat-label>OTP</mat-label>
+      <input matInput [(ngModel)]="otp" name="otp" required>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Verify</button>
+  </form>
+</mat-card>

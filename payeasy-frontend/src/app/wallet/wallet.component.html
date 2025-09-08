@@ -1,0 +1,10 @@
+<mat-card>
+  <h2>Wallet Balance: {{balance | currency}}</h2>
+  <form (ngSubmit)="addMoney()">
+    <mat-form-field appearance="fill">
+      <mat-label>Amount</mat-label>
+      <input matInput type="number" [(ngModel)]="amount" name="amount" required>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Add Money</button>
+  </form>
+</mat-card>

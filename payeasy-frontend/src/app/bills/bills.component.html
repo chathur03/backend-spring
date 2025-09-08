@@ -1,0 +1,14 @@
+<mat-card>
+  <h2>Pay Bill</h2>
+  <form (ngSubmit)="pay()">
+    <mat-form-field appearance="fill">
+      <mat-label>Biller</mat-label>
+      <input matInput [(ngModel)]="bill.biller" name="biller" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Amount</mat-label>
+      <input matInput type="number" [(ngModel)]="bill.amount" name="amount" required>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Pay</button>
+  </form>
+</mat-card>

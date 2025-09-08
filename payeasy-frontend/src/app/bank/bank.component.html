@@ -1,0 +1,15 @@
+<mat-card>
+  <h2>Link Bank Account</h2>
+  <form (ngSubmit)="link()">
+    <mat-form-field appearance="fill">
+      <mat-label>UPI ID</mat-label>
+      <input matInput [(ngModel)]="upiId" name="upiId" required>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Link</button>
+  </form>
+
+  <h3>Linked Accounts</h3>
+  <mat-list>
+    <mat-list-item *ngFor="let a of accounts">Account ****{{a.last4}}</mat-list-item>
+  </mat-list>
+</mat-card>

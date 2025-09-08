@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <span>PayEasy</span>
+  <span class="spacer"></span>
+  <a mat-button routerLink="/wallet" *ngIf="auth.isLoggedIn()">Wallet</a>
+  <a mat-button routerLink="/bills" *ngIf="auth.isLoggedIn()">Bills</a>
+  <a mat-button routerLink="/shop" *ngIf="auth.isLoggedIn()">Shop</a>
+  <a mat-button routerLink="/merchant" *ngIf="auth.isMerchant()">Merchant</a>
+  <button mat-button routerLink="/login" *ngIf="!auth.isLoggedIn()">Login</button>
+  <button mat-button (click)="auth.logout()" *ngIf="auth.isLoggedIn()">Logout</button>
+</mat-toolbar>
